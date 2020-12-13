@@ -31,5 +31,3 @@ Only translated into english right now, which of course is not usper-useful for 
 
 ## License
 This software is licensed using GPL. It contains some non-original public domain code from https://github.com/30-seconds/30-seconds-of-code/
-
-The test cases come from HNK web and are excluded from the license

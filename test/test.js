@@ -1,20 +1,15 @@
-chrome.contextMenus.create({
-    "type": "normal",
-    "id": "lonm-ruby-copy-main",
-    "title": chrome.i18n.getMessage("copymain"),
-    "contexts": ["selection"]
-});
-chrome.contextMenus.create({
-    "type": "normal",
-    "id": "lonm-ruby-copy-annotation",
-    "title": chrome.i18n.getMessage("copyanno"),
-    "contexts": ["selection"]
-});
-
-// injct this script onto the page
-// replace the BLAH with a recursive function first
-function injectedScript(){
+/**
+ * HOW TO TEST
+ * 1. Copy the function from background script to below
+ * 2. Add the argument BLAH
+ * 3. Set this variable:
+ * const processElementRecursive = BLAH ? processElementRecursiveExcludeRT : processElementRecursiveRTOnly;
+ */
+function injectedScript(BLAH){
     debugger; // being in dev console prevents copy script from working
+
+    // this should be replaced when injecting script
+    const processElementRecursive = BLAH ? processElementRecursiveExcludeRT : processElementRecursiveRTOnly;
 
     // Process the elements, including only RTs when inside RUBY
     function processElementRecursiveRTOnly(element, startel, startoff, endel, endoff){
@@ -62,9 +57,6 @@ function injectedScript(){
             return text;
         }
     }
-
-    // this should be replaced when injecting script
-    const processElementRecursive = BLAH;
 
     const s = window.getSelection();
     if(s.type.toLowerCase()!=="range"){
@@ -135,15 +127,3 @@ function injectedScript(){
     copyToClipboard(selectionText);
     return selectionText;
 }
-
-chrome.contextMenus.onClicked.addListener((info, tab) => {
-    if(info.menuItemId==="lonm-ruby-copy-main"){
-        chrome.tabs.executeScript(tab.id, {
-            code: `(${injectedScript.toString().replace("BLAH", "processElementRecursiveExcludeRT")})()`
-        })
-    } else if (info.menuItemId==="lonm-ruby-copy-annotation"){
-        chrome.tabs.executeScript(tab.id, {
-            code: `(${injectedScript.toString().replace("BLAH", "processElementRecursiveRTOnly")})()`
-        })
-    }
-});

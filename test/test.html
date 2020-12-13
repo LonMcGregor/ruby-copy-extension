@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Runner</title>
+    <link href="test.css" rel="stylesheet">
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>Pass/Fail</th>
+            <th>Input</th>
+            <th>Expected Main</th>
+            <th>Actual Main</th>
+            <th>Expected Annotaion</th>
+            <th>Actual Annotaion</th>
+        </thead>
+
+        <tr class="test fwd" offstart=0 offend=0>
+            <td class="outcome"></td>
+            <td class="in"><ruby>花<rt>はな</rt>がきれい</ruby></td>
+            <td class="expectmain">花がきれい</td>
+            <td class="outmain"></td>
+            <td class="expectanno">はながきれい</td>
+            <td class="outanno"></td>
+        </tr>
+
+        <tr class="test bwd" offstart=0 offend=0>
+            <td class="outcome"></td>
+            <td class="in"><ruby>花<rt>はな</rt>がきれい</ruby></td>
+            <td class="expectmain">花がきれい</td>
+            <td class="outmain"></td>
+            <td class="expectanno">はながきれい</td>
+            <td class="outanno"></td>
+        </tr>
+
+        <tr class="test">
+            <td class="outcome"></td>
+            <td class="in"><p>１２<ruby>月<rt>がつ</rt></ruby><ruby>１０日<rt>とおか</rt></ruby>は<ruby>世界<rt>せかい</rt></ruby>です。</td>
+            <td class="expectmain">１２月１０日は世界です。</td>
+            <td class="outmain"></td>
+            <td class="expectanno">１２がつとおかはせかいです。</td>
+            <td class="outanno"></td>
+        </tr>
+    </table>
+    <script src="test.js"></script>
+    <script src="testrunner.js"></script>
+</body>
+
+</html>
