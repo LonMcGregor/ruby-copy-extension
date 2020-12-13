@@ -1,0 +1,18 @@
+{
+    "title": {
+        "message": "Ruby Copy",
+        "description": "Extension title"
+    },
+    "description": {
+        "message": "Context menu options to only copy part of Ruby Markup",
+        "description": "Extension description"
+    },
+    "copymain": {
+        "message": "Copy with Main Text only",
+        "description": "context menu label copy main text"
+    },
+    "copyanno": {
+        "message": "Copy with Annotations only",
+        "description": "context menu label copy ruby annotation"
+    }
+}

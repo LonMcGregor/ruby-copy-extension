@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_title__",
+  "version": "1.0.0",
+
+  "description": "__MSG_description__",
+  "default_locale": "en",
+
+  "icons": {
+      "16": "icon16.png",
+      "24": "icon24.png",
+      "48": "icon48.png",
+      "32": "icon32.png",
+      "128": "icon128.png"
+  },
+
+  "permissions": ["contextMenus", "<all_urls>"],
+
+   "background": {
+    "scripts": ["bg.js"],
+    "persistent": false
+  }
+}

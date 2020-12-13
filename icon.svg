@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="472.61539"
+   inkscape:export-xdpi="472.61539"
+   inkscape:export-filename="C:\Users\L\git\vivaldi\ruby-copy\src\icon128.png"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="icon.svg"
+   id="svg4"
+   version="1.1"
+   viewBox="1 -1 26 26">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg4"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="-14.848293"
+     inkscape:cx="-57.671584"
+     inkscape:zoom="2.9236146"
+     showgrid="false"
+     id="namedview6"
+     inkscape:window-height="1027"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <rect
+     ry="0"
+     y="0.088372141"
+     x="3.2976744"
+     height="7.6790705"
+     width="14.209302"
+     id="rect843"
+     style="fill:#0000ff;stroke:none;stroke-width:0.15238;stroke-miterlimit:4;stroke-dasharray:none" />
+  <text
+     id="text837"
+     y="22.956083"
+     x="1.0953577"
+     style="font-style:normal;font-weight:normal;font-size:18.6577px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.466445"
+     xml:space="preserve"><tspan
+       style="stroke-width:0.466445"
+       y="22.956083"
+       x="1.0953577"
+       id="tspan835"
+       sodipodi:role="line">花</tspan></text>
+  <text
+     id="text841"
+     y="6.4956617"
+     x="2.7895832"
+     style="font-style:normal;font-weight:normal;font-size:7.45197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1863"
+     xml:space="preserve"><tspan
+       style="fill:#ffffff;stroke-width:0.1863"
+       y="6.4956617"
+       x="2.7895832"
+       id="tspan839"
+       sodipodi:role="line">はな</tspan></text>
+  <path
+     sodipodi:nodetypes="ccccccccccccc"
+     id="path847"
+     d="m 23.794655,2.4821201 v 1.1707458 h -1.851412 v 9.0936981 h 1.851412 v 1.334107 h -4.71021 v -1.334107 h 1.715279 V 3.6528659 H 19.084445 V 2.4821201 Z"
+     style="fill:none;stroke:#000000;stroke-width:0.450287;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+</svg>
