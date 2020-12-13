@@ -2,7 +2,15 @@
 
 Lets you copy only the kana or only the kanji from a `<ruby>` HTML markup selection. Most web browsers will just give you a long string with everything jumbled together when you make such a selection.
 
-TODO: add a screenshot
+## Example
+
+Selecting the following and trying to copy, you get:
+
+Selection | In-Browser Copy | Extension Copy (main) | Extension Copy (annotation)
+--|--|--|--
+<ruby>花<rt>はな</rt>がきれい</ruby> | 花はながきれい | 花がきれい | はながきれい
+
+The extension lets you copy your full selection, but either with ONLY the main part of the `<ruby>` markup, or ONLY the annotation.
 
 ## Development Notes
 

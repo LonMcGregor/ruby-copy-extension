@@ -109,7 +109,8 @@ function injectedScript(){
         selectionText = selectionText + processElementRecursive(element, startel, startoff, endel, endoff);
     })
 
-    //https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
+    // https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
+    // CC-0 https://github.com/30-seconds/30-seconds-of-code/blob/master/LICENSE
     function copyToClipboard(str) {
         const el = document.createElement('textarea');  // Create a <textarea> element
         el.value = str;                                 // Set its value to the string that you want copied
