@@ -12,25 +12,51 @@ chrome.contextMenus.create({
 });
 
 // injct this script onto the page
+// replace the BLAH with a recursive function first
 function injectedScript(){
-    //debugger; // being in dev console prevents copy script from working
-    //only continue if selection.type === "range"
+    debugger; // being in dev console prevents copy script from working
 
-    function processElementRecursive(element){
-        if(element.nodeName==="RT"){
-            return ""; // TODO add case where we only want RTs
-        } else if(element.nodeName==="#text"){
+    // Process the elements, including only RTs when inside RUBY
+    function processElementRecursiveRTOnly(element){
+        if(element.nodeName==="#text"){
             return element.textContent;
+        } else if(element.nodeName.toUpperCase()==="RUBY") {
+            let text = '';
+            let children = Array.from(element.childNodes).filter(e => e.nodeName.toUpperCase()==="RT");
+            children.forEach(child => {
+                text = text + processElementRecursiveRTOnly(child);
+            });
+            return text;
         } else {
             let text = '';
             Array.from(element.childNodes).forEach(child => {
-                text = text + processElementRecursive(child);
+                text = text + processElementRecursiveRTOnly(child);
             });
             return text;
         }
     }
 
+    // Process the elements, excluding RTs
+    function processElementRecursiveExcludeRT(element){
+        if(element.nodeName.toUpperCase()==="RT"){
+            return "";
+        } else if(element.nodeName==="#text"){
+            return element.textContent;
+        } else {
+            let text = '';
+            Array.from(element.childNodes).forEach(child => {
+                text = text + processElementRecursiveExcludeRT(child);
+            });
+            return text;
+        }
+    }
+
+    const processElementRecursive = BLAH; // this should be replaced when injecting script
+
     const s = window.getSelection();
+    if(s.type.toLowerCase()!=="range"){
+        return;
+    }
     // get all selected elements
     // todo worry about offsets/partially selected elements later
     // TODO what if the selection is backwards
@@ -68,15 +94,18 @@ function injectedScript(){
         }
     }
 
+    console.log(selectionText);
     copyToClipboard(selectionText);
 }
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     if(info.menuItemId==="lonm-ruby-copy-main"){
         chrome.tabs.executeScript(tab.id, {
-            code: `(${injectedScript})()`
+            code: `(${injectedScript.toString().replace("BLAH", "processElementRecursiveExcludeRT")})()`
         })
     } else if (info.menuItemId==="lonm-ruby-copy-annotation"){
-
+        chrome.tabs.executeScript(tab.id, {
+            code: `(${injectedScript.toString().replace("BLAH", "processElementRecursiveRTOnly")})()`
+        })
     }
 });
