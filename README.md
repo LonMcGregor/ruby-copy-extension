@@ -23,6 +23,10 @@ The Clipboard API has a lot of workaround code.
 ## Known Issues
 Selection boundaries are still a finnicky issue and there are so many edge cases it's a pain to manage. Particularly if the start or end of the selection is within a `<rt>` tag.
 
+There are still a lot of edge cases where the extension fails to select the right text. I need more examples and better automated testing.
+
+The select main text only part is more stable than the select annotation only part.
+
 Only translated into english right now, which of course is not usper-useful for people who commonly encounter `<ruby>`.
 
 ## License
